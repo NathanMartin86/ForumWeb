@@ -1,5 +1,16 @@
 <html>
 <body>
+{{#username}}
+Welcome, {{username}}!<br>
+{{/username}}
+
+{{^username}}
+<form action = "login" method = "post">
+    <input type = "text" placeholder = username name = "username"/>
+    <input type = "password" placeholder="Password" name="password"/>
+    <button type = "submit">Login or Create Account</button>
+</form>
+{{/username}}
 {{#threads}}
 {{text}} by {{username}}<br>
 {{/threads}}
